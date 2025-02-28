@@ -18,7 +18,7 @@ public class GeoCodingController {
      this.geocodingService = geocodingService;
     }
 
-    @GetMapping("/geocoding")
+    @GetMapping("/geocode")
     public ResponseEntity<GeoCodingResponse> getGeocoding(@RequestParam("address") String address) throws InvalidRequestException, ExternalApiException {
         if (address == null || address.isBlank()) {
             throw new InvalidRequestException("Address parameter cannot be null or empty.");
